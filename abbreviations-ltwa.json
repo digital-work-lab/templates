@@ -1,0 +1,16 @@
+{
+    "default": {
+        "container-title": {
+            "Organizational Research Methods": "Organ. Res. Method.",
+            "MIS Quarterly": "MIS Quart.",
+            "Information Systems Researcn": "Inf. Syst. Res.",
+            "International Journal of Management Reviews": "Int. J. Manag. Rev.",
+            "Journal of Management": "J. Manag.",
+            "European Journal of Information Systems": "Eur. J. Inf. Syst.",
+            "British Journal of Management": "Br. J. Manag.",
+            "Journal of Information Technology": "J. Inf. Technol.",
+            "Academy of Management Perspectives": "Acad. Manag. Perspect.",
+            "Journal of the Association for Information Systems": "J. Assoc. Inf. Syst."
+       }
+    }
+}
