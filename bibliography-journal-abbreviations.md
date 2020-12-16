@@ -4,7 +4,7 @@
 
 -   Status: not complete (check reference section and add missing to json)
 -   journal abbreviations according to [LTWA](https://www.issn.org/services/online-services/access-to-the-ltwa)
--   e.g., Information & Management (Elsevier)
+-   e.g., Information & Management (Elsevier), Information Systems Research (INFORMS)
     Makefile include:
 
 
