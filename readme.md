@@ -63,5 +63,9 @@
 -   [Manuscript template](MISQ.docx)
 -   [CSL for references](styles/mis-quarterly.csl)
 -   [Author instructions](https://misq.org/instructions/)
--   Notes:-
+-   Notes:
+    - Remove authors (title page and document properties) for review.
+    - Include keywords on page 1.
+    - Copy paper title to page 2.
+    - Fix manually: Third Subhead: On same line as beginning of text, flush left, bold, upper/lower case, followed by a colon.
 -   Status: Developmental
