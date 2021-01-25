@@ -69,3 +69,10 @@
     - Copy paper title to page 2.
     - Fix manually: Third Subhead: On same line as beginning of text, flush left, bold, upper/lower case, followed by a colon.
 -   Status: Developmental
+
+
+# Additional resources
+
+[rticles](https://github.com/rstudio/rticles)
+[oxforddown](https://github.com/ulyngs/oxforddown)
+[papaja](https://github.com/crsh/papaja)
