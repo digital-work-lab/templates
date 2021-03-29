@@ -80,7 +80,14 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
     - Fix manually: Third Subhead: On same line as beginning of text, flush left, bold, upper/lower case, followed by a colon.
 -   Status: Developmental
 
+## Journal of Information Technology
 
+-   [Manuscript template](MISQ.docx)
+-   [CSL for references](styles/sage-harvard.csl)
+-   [Author instructions](https://journals.sagepub.com/author-instructions/JIN#ManuscriptPrep)
+- Notes:
+    - There is no need to follow a specific template when submitting your manuscript in Word. However, please ensure your heading levels are clear, and the sections clearly defined.
+-   Status: Developmental
 
 # Additional resources
 
