@@ -26,8 +26,8 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
 
 ## ICIS
 
--   [Manuscript template](todo)
--   [CSL for references](...)
+-   [Manuscript template](ICIS2021.docx)
+-   [CSL for references](styles/mis-quarterly.csv)
 -   [Author guidelines](...)
 -   Notes:-
 -   Status: Developmental
