@@ -1,12 +1,30 @@
 # Templates for IS
 
 -   Describe how to develop templates (important for word reference documents: modify the pandoc template instead of including other word documents)
+```
+docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile -o reference.docx --print-default-data-file reference.docx > reference.docx
+```
 -   Mention the position of templates in the manuscript production process
--   Descibe things to consider when using the templates (general and template-specific checklists)
+-   Describe things to consider when using the templates (general and template-specific checklists)
+-   For conferences: replace the templates from previous years
 
 # Overview
 
 ## ECIS
+
+-   [Manuscript template](ECIS2021.docx)
+-   [CSL for references](...)
+-   [Author guidelines](styles/apa-6th-edition-no-ampersand.csl)
+-   Notes:
+    - Manually update: Heading style for abstract and reference should be "subtitle"
+    - APA 6 (no ampersand) seems to fit best. Manual changes necessary:
+      - Journal titles: add quotes
+      - Proceedings: capitalize
+      - volume/issue: add space
+      - Editors (e.g., in proceedings)
+-   Status: Developmental
+
+## ICIS
 
 -   [Manuscript template](todo)
 -   [CSL for references](...)
@@ -14,18 +32,10 @@
 -   Notes:-
 -   Status: Developmental
 
-## ICIS
-
--   [Manuscript template](todo)
--   [CSL for references](...)        
--   [Author guidelines](...)
--   Notes:-
--   Status: Developmental
-
 ## Information and Management
 
 -   [Manuscript template](APA-7.docx)
--   [CSL for references](styles/elsevier-with-titles.csl)        
+-   [CSL for references](styles/elsevier-with-titles.csl)
 -   [Author guidelines](https://www.elsevier.com/journals/information-and-management/0378-7206/guide-for-authors)
 -   Notes:
   - No strict formatting requirements
@@ -71,7 +81,11 @@
 -   Status: Developmental
 
 
+
 # Additional resources
+
+Searching CSL by example: https://csl.mendeley.com/searchByExample/
+Word reference document, heading numbers: https://www.layoutheo.de/tutorials/ueberschriften/ueberschriften-nummerieren-blog.html
 
 [rticles](https://github.com/rstudio/rticles)
 [oxforddown](https://github.com/ulyngs/oxforddown)
