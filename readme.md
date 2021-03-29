@@ -17,6 +17,8 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
 -   [Author guidelines](styles/apa-6th-edition-no-ampersand.csl)
 -   Notes:
     - Manually update: Heading style for abstract and reference should be "subtitle"
+    - Manually update the short title (header)
+    - Authors: should be in individual lines.
     - APA 6 (no ampersand) seems to fit best. Manual changes necessary:
       - Journal titles: add quotes
       - Proceedings: capitalize
