@@ -13,17 +13,12 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
 ## ECIS
 
 -   [Manuscript template](ECIS2021.docx)
--   [CSL for references](...)
--   [Author guidelines](styles/apa-6th-edition-no-ampersand.csl)
+-   [CSL for references](custom-styles/ecis.csl)
+-   [Author guidelines](...)
 -   Notes:
     - Manually update: Heading style for abstract and reference should be "subtitle"
     - Manually update the short title (header)
     - Authors: should be in individual lines.
-    - APA 6 (no ampersand) seems to fit best. Manual changes necessary:
-      - Journal titles: add quotes
-      - Proceedings: capitalize
-      - volume/issue: add space
-      - Editors (e.g., in proceedings)
 -   Status: Developmental
 
 ## ICIS
