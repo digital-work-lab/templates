@@ -90,6 +90,7 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
 
 Searching CSL by example: https://csl.mendeley.com/searchByExample/
 Word reference document, heading numbers: https://www.layoutheo.de/tutorials/ueberschriften/ueberschriften-nummerieren-blog.html
+Particular styles (e.g., "Figure") in Word document may need to be activated/added to the catalogue before editing them in the reference document.
 
 [rticles](https://github.com/rstudio/rticles)
 [oxforddown](https://github.com/ulyngs/oxforddown)
