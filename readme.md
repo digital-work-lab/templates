@@ -1,14 +1,48 @@
 # Templates for IS
 
--   Describe how to develop templates (important for word reference documents: modify the pandoc template instead of including other word documents)
+- Explain the position of templates in the manuscript production process
+
+# Contributing
+
+How to develop templates [1](https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html ):
+
+-   [ ] Describe things to consider when using the templates (general and template-specific checklists)
+-  Important for word reference documents: modify the pandoc template instead of including other word documents)
 ```
 docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile -o reference.docx --print-default-data-file reference.docx > reference.docx
 ```
--   Mention the position of templates in the manuscript production process
--   Describe things to consider when using the templates (general and template-specific checklists)
 -   For conferences: replace the templates from previous years
 
-# Overview
+# Basic Template
+
+The [basic](basic.tex) template offers a simple Latex template for developing manuscripts before finalizing them with a custom journal/conference template.
+Since this template does not include journal-specific layouts, all manuscripts are formatted consistently.
+In addition, the template includes header information on the current version of the manuscript (based on the git history and the markdown header):
+
+```
+ShortTitle (YYYY-MM-DD, Committer, branch, commit-id)
+```
+
+Adding this information to the PDF allows you to easily find the version (git commit) that corresponds to the PDF.
+This is particularly useful when printing PDFs or sharing them for feedback.
+
+Using the [basic](basic.tex) template requires gitinfo2, which must be set up in the individual manuscript repositories:
+
+```
+cp /usr/share/texlive/texmf-dist/tex/latex/gitinfo2/post-xxx-sample.txt .git/hooks/post-checkout
+cp .git/hooks/post-checkout .git/hooks/post-merge
+cp .git/hooks/post-checkout .git/hooks/post-commit
+```
+
+It has to be installed in the pandoc-docker container as suggested in this [Dockerfile](Dockerfile).
+To build the container, simply run:
+
+```
+docker build -t pandoc_dockerfile .
+```
+
+
+# Custom Journal/Conference Templates
 
 ## ECIS
 
@@ -29,7 +63,7 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
 -   Notes:-
 -   Status: Developmental
 
-## Information and Management
+## Information and Management (I&M)
 
 -   [Manuscript template](APA-7.docx)
 -   [CSL for references](styles/elsevier-with-titles.csl)
@@ -39,7 +73,7 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
   - Bibliography should use journal abbreviations (described [here](bibliography-journal-abbreviations.md)): abbreviations-ltwa.json
 -   Status: Developmental
 
-## Journal of the Association for Information Systems
+## Journal of the Association for Information Systems (JAIS)
 
 -   [Manuscript template](APA-7.docx)
 -   [CSL for references](...)
@@ -47,7 +81,7 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
 -   Notes:-
 -   Status: Developmental
 
-## Information Systems Research
+## Information Systems Research (ISR)
 
 -   [Manuscript template](ISR.docx)
 -   [CSL for references](styles/institute-for-operations-research-and-the-management-sciences.csl)
@@ -57,7 +91,7 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
 -   Bibliography should use journal abbreviations (described [here](bibliography-journal-abbreviations.md)): abbreviations-informs.json
 -   Status: Developmental
 
-## Organizational Research Methods
+## Organizational Research Methods (ORM)
 
 -   [Manuscript template](APA-7.docx)
 -   [CSL for references](styles/apa-6th-edition.csl)
@@ -65,7 +99,7 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
 -   Notes:-
 -   Status: Developmental
 
-## MIS Quarterly
+## MIS Quarterly (MISQ)
 
 -   [Manuscript template](MISQ.docx)
 -   [CSL for references](styles/mis-quarterly.csl)
@@ -77,7 +111,7 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc_dockerfile 
     - Fix manually: Third Subhead: On same line as beginning of text, flush left, bold, upper/lower case, followed by a colon.
 -   Status: Developmental
 
-## Journal of Information Technology
+## Journal of Information Technology (JIT)
 
 -   [Manuscript template](MISQ.docx)
 -   [CSL for references](styles/sage-harvard.csl)
