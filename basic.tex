@@ -99,9 +99,9 @@ $if(linestretch)$
 \usepackage{setspace}
 $endif$
 \usepackage{fancyhdr}
-%\usepackage{gitinfo2}
-%\edef\masterBranch{\detokenize{master}}
-%\edef\gitBranch{\gitBranch}
+\usepackage{gitinfo2}
+\edef\masterBranch{\detokenize{master}}
+\edef\gitBranch{\gitBranch}
 \usepackage[labelsep=period,font=bf]{caption}
 \usepackage[margin=1in, bottom=2.54cm]{geometry}
 \usepackage[utf8]{inputenc}
@@ -110,27 +110,26 @@ $endif$
 }
 
 % No header on the first page. Only a footer
-%\fancypagestyle{plain}{
-%\fancyhf{}
-%\fancyhead[C]{\changefont{\texttt{\textcolor{gray}{$if(project.abbreviation)${\@$project.abbreviation$} $endif$%
-%$if(project.manuscriptrepository)${(\gitCommitterDate, \gitCommitterName{}, \ifx\gitBranch\masterBranch
-%	\else
-%	\gitBranch, %
-%	\fi
-%	\href{$project.manuscriptrepository$}{\underline{\gitAbbrevHash{}}}}$else${\gitAbbrevHash{}}$endif$$if(project.datarepository)$, {\href{$project.datarepository$}{\underline{data repository}}}$endif$)}}}}
-%\fancyfoot[C]{\changefont\hspace{4.5mm}\textbf{\thepage}}
-%}
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyhead[C]{\changefont{\texttt{\textcolor{gray}{$if(project.abbreviation)${\@$project.abbreviation$} $endif$%
+$if(project.manuscriptrepository)${(\gitCommitterDate, \gitCommitterName{}, \ifx\gitBranch\masterBranch
+	\else
+	\gitBranch, %
+	\fi
+	\href{$project.manuscriptrepository$}{\underline{\gitAbbrevHash{}}}}$else${\gitAbbrevHash{}}$endif$$if(project.datarepository)$, {\href{$project.datarepository$}{\underline{data repository}}}$endif$)}}}}
+\fancyfoot[C]{\changefont\hspace{4.5mm}\textbf{\thepage}}
+}
 
 % Header and footer info
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{}
-%\changefont{\texttt{\textcolor{gray}{$if(project.abbreviation)${\@$project.abbreviation$} $endif$%
-%			$if(project.manuscriptrepository)${(\gitCommitterDate, \gitCommitterName{}, \ifx\gitBranch\masterBranch
-%				\else
-%				\gitBranch, %
-%				\fi
-%				\href{$project.manuscriptrepository$}{\underline{\gitAbbrevHash{}}}}$else${\gitAbbrevHash{}}$endif$$if(project.datarepository)$, {\href{$project.datarepository$}{\underline{data repository}}}$endif$)}}}
+\fancyhead[C]{\changefont{\texttt{\textcolor{gray}{$if(project.abbreviation)${\@$project.abbreviation$} $endif$%
+				$if(project.manuscriptrepository)${(\gitCommitterDate, \gitCommitterName{}, \ifx\gitBranch\masterBranch
+					\else
+					\gitBranch, %
+					\fi
+					\href{$project.manuscriptrepository$}{\underline{\gitAbbrevHash{}}}}$else${\gitAbbrevHash{}}$endif$$if(project.datarepository)$, {\href{$project.datarepository$}{\underline{data repository}}}$endif$)}}}}
 \fancyfoot[C]{\changefont\hspace{4.5mm}\textbf{\thepage}}
 
 
