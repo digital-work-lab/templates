@@ -94,8 +94,24 @@ docker build -t pandoc_dockerfile .
 ## Organizational Research Methods (ORM)
 
 -   [Manuscript template](APA-7.docx)
--   [CSL for references](styles/apa-6th-edition.csl)
+-   [CSL for references](styles/apa.csl)
 -   [Author guidelines](https://journals.sagepub.com/author-instructions/ORM)
+-   Notes:-
+-   Status: Developmental
+
+## Communications of the Association for Information Systems (CAIS)
+
+-   [Manuscript template](CAIS.docx)
+-   [CSL for references](styles/apa.csl)
+-   [Author guidelines](https://aisel.aisnet.org/cais/format.html)
+-   Notes:-
+-   Status: Developmental
+
+## Journal of Information Systems Education (JISE)
+
+-   [Manuscript template](JISE.docx)
+-   [CSL for references](styles/jise.csl)
+-   [Author guidelines](https://jise.org/initial.html)
 -   Notes:-
 -   Status: Developmental
 
