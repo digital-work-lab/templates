@@ -102,7 +102,7 @@ docker build -t pandoc_dockerfile .
 ## Communications of the Association for Information Systems (CAIS)
 
 -   [Manuscript template](CAIS.docx)
--   [CSL for references](styles/apa.csl)
+-   [CSL for references](custom_styles/cais.csl)
 -   [Author guidelines](https://aisel.aisnet.org/cais/format.html)
 -   Notes:-
 -   Status: Developmental
