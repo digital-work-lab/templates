@@ -20,9 +20,7 @@ $if(beamerarticle)$
 \usepackage{beamerarticle} % needs to be loaded first
 $endif$
 \usepackage{xcolor}
-$if(geometry)$
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$endif$
+\usepackage[margin=1in, bottom=2.54cm]{geometry}
 \usepackage{amsmath,amssymb}
 $--
 $-- section numbering
@@ -40,6 +38,43 @@ $header-includes$
 $endfor$
 $after-header-includes.latex()$
 $hypersetup.latex()$
+
+\usepackage{fancyhdr}
+\usepackage{gitinfo2}
+\edef\masterBranch{\detokenize{master}}
+\edef\gitBranch{\gitBranch}
+\usepackage[utf8]{inputenc}
+\newcommand{\changefont}{%
+\fontsize{9}{11}\selectfont
+}
+
+% No header on the first page. Only a footer
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyhead[C]{\changefont{\texttt{\textcolor{gray}{$if(project.abbreviation)${\@$project.abbreviation$} $endif$%
+$if(project.manuscriptrepository)${(\gitCommitterDate, \gitCommitterName{}, \ifx\gitBranch\masterBranch
+	\else
+	\gitBranch, %
+	\fi
+	\href{$project.manuscriptrepository$}{\underline{\gitAbbrevHash{}}}}$else${\gitAbbrevHash{}}$endif$$if(project.datarepository)$, {\href{$project.datarepository$}{\underline{data repository}}}$endif$)}}}}
+\fancyfoot[C]{\changefont\hspace{4.5mm}\textbf{\thepage}}
+}
+
+% Header and footer info
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\changefont{\texttt{\textcolor{gray}{$if(project.abbreviation)${\@$project.abbreviation$} $endif$%
+				$if(project.manuscriptrepository)${(\gitCommitterDate, \gitCommitterName{}, \ifx\gitBranch\masterBranch
+					\else
+					\gitBranch, %
+					\fi
+					\href{$project.manuscriptrepository$}{\underline{\gitAbbrevHash{}}}}$else${\gitAbbrevHash{}}$endif$$if(project.datarepository)$, {\href{$project.datarepository$}{\underline{data repository}}}$endif$)}}}}
+\fancyfoot[C]{\changefont\hspace{4.5mm}\textbf{\thepage}}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
 
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
