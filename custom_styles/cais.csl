@@ -1682,6 +1682,10 @@
   </macro>
   <macro name="access">
     <choose>
+      <if variable="DOI">
+        <!-- Always print DOI as a full https://doi.org/... URL -->
+        <text variable="DOI" prefix="https://doi.org/"/>
+      </if>
       <else-if variable="URL">
         <group delimiter=" ">
           <choose>

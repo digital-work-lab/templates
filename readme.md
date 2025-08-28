@@ -104,7 +104,7 @@ docker build -t pandoc_dockerfile .
 -   [Manuscript template](CAIS.docx)
 -   [CSL for references](custom_styles/cais.csl) (APA without DOIs)
 -   [Author guidelines](https://aisel.aisnet.org/cais/format.html)
--   Notes: Titles are automatically linked with DOIs (pandoc/citeproc built-in that cannot be deactivated) - the only solution is to remove / comment dois in bib-file.
+-   Notes: -
 -   Status: Developmental
 
 ## Journal of Information Systems Education (JISE)
