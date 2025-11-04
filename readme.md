@@ -1,5 +1,8 @@
 # Templates for IS
 
+> [!NOTE]
+> TODO: migrate to https://quarto.org/docs/extensions/listing-journals.html
+
 - Explain the position of templates in the manuscript production process
 
 # Contributing
