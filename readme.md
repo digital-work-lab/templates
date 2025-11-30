@@ -60,11 +60,14 @@ docker build -t pandoc_dockerfile .
 
 ## ICIS
 
+**SEE https://github.com/fs-ise/quarto-template-international-conference-on-information-systems **
+
 -   [Manuscript template](ICIS2021.docx)
 -   [CSL for references](styles/mis-quarterly.csv)
 -   [Author guidelines](...)
 -   Notes:-
 -   Status: Developmental
+
 
 ## Information and Management (I&M)
 
